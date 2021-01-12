@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".fragment.ScrollSlideFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
+
+    <com.example.phone.view.CustomizeScrollView
+            android:id="@+id/csv_first"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+    </com.example.phone.view.CustomizeScrollView>
+</LinearLayout>
